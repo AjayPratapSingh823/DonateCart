@@ -1,6 +1,9 @@
+import Layout from '../components/layout/Layout'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '../styles/global.css'
+
+import { Create } from '@mui/icons-material'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Layout>
+      <body className={inter.className}>{children}
+      </body>
+      </Layout>
     </html>
   )
 }
